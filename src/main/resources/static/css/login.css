@@ -64,6 +64,26 @@ body{
     cursor: pointer;
     box-shadow: 1px 1px 10px #696969;
 }
+.sign_up{
+	width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background-image: linear-gradient(to right,#F26FC9, #8772EF);
+    color: #ffff;
+    align-items:center;
+    right:100px;
+}
+.sign_up:hover{
+	cursor: pointer;
+    box-shadow: 1px 1px 10px #696969;
+}
+.sign_up a{
+	text-decoration:none;
+	color: #ffff;
+	align-items:center;
+    right:100px;
+}
 a{
     display: block;
     text-align: right;
