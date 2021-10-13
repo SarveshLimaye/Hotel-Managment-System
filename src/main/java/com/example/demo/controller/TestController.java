@@ -19,5 +19,12 @@ public String signup() {
 public String hotel() {
 	return "hotel";
 }
-
+@RequestMapping(value={"/room_reservation"})
+public String room_reservation(){
+	return "room_reservation";
+}
+@RequestMapping(value={"/facilities"})
+public String facilities(){
+	return "facilities";
+}
 }

@@ -1,152 +1,156 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.com">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="css/hotel.css"  rel="stylesheet" crossorigin="anonymous">
+    <link href="css/hotel.css" rel="stylesheet" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <a class="navbar-brand  " href="#">HYATT PALACE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Booking</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Facilities</a>
-              </li>
-            
-              <li class="nav-item">
-                <a class="nav-link" href="#">Restaurant</a>
-              </li>
-           
-          </ul>
-          
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/room_reservation">Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/facilities">Facilities</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Restaurant</a>
+                </li>
+
+            </ul>
+
         </div>
-      </nav>
+    </nav>
 
 
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators slider">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active container-fluid">
-            <img class="d-block w-100 image" src="https://images.moneycontrol.com/static-mcnews/2019/09/Samhi_Hotels-770x433.jpg?impolicy=website&width=770&height=431" alt="First slide">
-          </div>
-          <div class="carousel-item container-fluid">
-            <img class="d-block w-100 image" src="https://media.istockphoto.com/photos/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab-picture-id472899538?b=1&k=20&m=472899538&s=170667a&w=0&h=oGDM26vWKgcKA3ARp2da-H4St2dMEhJg23TTBeJgPDE=" alt="Second slide">
-          </div>
-          <div class="carousel-item container-fluid">
-            <img class="d-block w-100 image" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Third slide">
-          </div>
+            <div class="carousel-item active container-fluid">
+                <img class="d-block w-100 image" src="https://images.moneycontrol.com/static-mcnews/2019/09/Samhi_Hotels-770x433.jpg?impolicy=website&width=770&height=431" alt="First slide">
+            </div>
+            <div class="carousel-item container-fluid">
+                <img class="d-block w-100 image" src="https://media.istockphoto.com/photos/downtown-cleveland-hotel-entrance-and-waiting-taxi-cab-picture-id472899538?b=1&k=20&m=472899538&s=170667a&w=0&h=oGDM26vWKgcKA3ARp2da-H4St2dMEhJg23TTBeJgPDE=" alt="Second slide">
+            </div>
+            <div class="carousel-item container-fluid">
+                <img class="d-block w-100 image" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGhvdGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Third slide">
+            </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
         </a>
         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only"></span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only"></span>
         </a>
-      </div>
+    </div>
 
-      <div class="room-card">
+    <div class="room-card">
         <div class="heading">
-        <h4 >Our Rooms</h4>
-      </div>
-        <div class="card-group">
-          <div class="card">
-            <img class="card-img-top" style="height: 200px; width: 100%;" src="https://media.istockphoto.com/photos/luxurious-apartment-master-bedroom-interior-with-bathroom-with-shower-picture-id1269416714?b=1&k=20&m=1269416714&s=170667a&w=0&h=y-7KXehLzBgkBiunl-bVMK3r4aTAOyBrVQK61LnQiks=" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Luxury Room</h5>
-              <p class="card-text">These cozy rooms located in the historic Palace Wing are the gateway to a memorable experience.Designed for our jet-setting business travellers who require silence.Perfect for meditation.</p>
-              <div class="facilities">
-                <span><i class="fas fa-building card-icon-building "></i>  33 sq mt</span><br>
-                
-                <span><i class="fas fa-wifi card-icon" ></i>   Complimentary WiFi</span><br>
-                <span><i class="fas fa-users card-icon"></i>  Upto 3 guests</span><br>
-                <span><i class="fas fa-bed card-icon"></i>  King Size</span>
-
-
-              </div>
-              
-              <div class="rate">
-              <small class="text-muted">Starting Rate/Night</small><br>
-              <span>16,950*</span><br>
-              <button>View Details</button>
-            </div>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" style="height: 200px; width:100%;" src="https://media.istockphoto.com/photos/3d-render-of-luxury-hotel-room-picture-id1277385898?b=1&k=20&m=1277385898&s=170667a&w=0&h=QOzC7zZV5SuiIo2lJ2eOuh18beeZgjkXSiUCvnwffjk=" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Luxury Grande Room City View</h5>
-              <p class="card-text"> They exude an aura of the old-world charm and elegance.These rooms are adorned with delicate Rajput bay-windows, offering spectacular views of the poolside or the bustling Mumbai city.</p>
-              <div class="facilities">
-                <span><i class="fas fa-building card-icon-building "></i>  33 sq mt</span><br>
-
-                <span><i class="fas fa-wifi card-icon"></i>   Complimentary WiFi</span><br>
-                <span><i class="fas fa-users card-icon"></i>  Upto 3 guests</span><br>
-                <span><i class="fas fa-bed card-icon"></i>  King Size</span>
-
-
-              </div>
-              
-              <div class="rate">
-              <small class="text-muted">Starting Rate/Night</small><br>
-              <span>18,700*</span><br>
-              <button>View Details</button>
-            </div>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" style="height: 200px; width:100%;" src="https://images.unsplash.com/photo-1592229505726-ca121723b8ef?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGx1eHVyeSUyMGhvdGVsJTIwcm9vbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Luxury Grande Room Sea View</h5>
-
-              <p class="card-text">These rooms have an old world charm with the delicate Rajput bay-windows that offer spectacular views of the Arabian Sea or the Gateway of India. Includes butler service and WiFi for four devices. </p>
-              
-              <div class="facilities">
-                <span><i class="fas fa-building card-icon-building "></i>  33 sq mt</span><br>
-                
-                <span><i class="fas fa-wifi card-icon"></i>   Complimentary WiFi</span><br>
-                <span><i class="fas fa-users card-icon"></i>  Upto 3 guests</span><br>
-                <span><i class="fas fa-bed card-icon"></i>  King Size</span>
-
-
-              </div>
-              
-              <div class="rate">
-              <small class="text-muted">Starting Rate/Night</small><br>
-              <span>20,825*</span><br>
-              <button>View Details</button>
-            </div>
-            </div>
-          </div>
+            <h4>Our Rooms</h4>
         </div>
-      </div>
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top" style="height: 200px; width: 100%;" src="https://media.istockphoto.com/photos/luxurious-apartment-master-bedroom-interior-with-bathroom-with-shower-picture-id1269416714?b=1&k=20&m=1269416714&s=170667a&w=0&h=y-7KXehLzBgkBiunl-bVMK3r4aTAOyBrVQK61LnQiks="
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Luxury Room</h5>
+                    <p class="card-text">These cozy rooms located in the historic Palace Wing are the gateway to a memorable experience.Designed for our jet-setting business travellers who require silence.Perfect for meditation.</p>
+                    <div class="facilities">
+                        <span><i class="fas fa-building card-icon-building "></i>  33 sq mt</span><br>
 
-      <section id="testimonials">
+                        <span><i class="fas fa-wifi card-icon" ></i>   Complimentary WiFi</span><br>
+                        <span><i class="fas fa-users card-icon"></i>  Upto 3 guests</span><br>
+                        <span><i class="fas fa-bed card-icon"></i>  King Size</span>
+
+
+                    </div>
+
+                    <div class="rate">
+                        <small class="text-muted">Starting Rate/Night</small><br>
+                        <span>16,950*</span><br>
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" style="height: 200px; width:100%;" src="https://media.istockphoto.com/photos/3d-render-of-luxury-hotel-room-picture-id1277385898?b=1&k=20&m=1277385898&s=170667a&w=0&h=QOzC7zZV5SuiIo2lJ2eOuh18beeZgjkXSiUCvnwffjk=" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Luxury Grande Room City View</h5>
+                    <p class="card-text"> They exude an aura of the old-world charm and elegance.These rooms are adorned with delicate Rajput bay-windows, offering spectacular views of the poolside or the bustling Mumbai city.</p>
+                    <div class="facilities">
+                        <span><i class="fas fa-building card-icon-building "></i>  33 sq mt</span><br>
+
+                        <span><i class="fas fa-wifi card-icon"></i>   Complimentary WiFi</span><br>
+                        <span><i class="fas fa-users card-icon"></i>  Upto 3 guests</span><br>
+                        <span><i class="fas fa-bed card-icon"></i>  King Size</span>
+
+
+                    </div>
+
+                    <div class="rate">
+                        <small class="text-muted">Starting Rate/Night</small><br>
+                        <span>18,700*</span><br>
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" style="height: 200px; width:100%;" src="https://images.unsplash.com/photo-1592229505726-ca121723b8ef?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGx1eHVyeSUyMGhvdGVsJTIwcm9vbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Luxury Grande Room Sea View</h5>
+
+                    <p class="card-text">These rooms have an old world charm with the delicate Rajput bay-windows that offer spectacular views of the Arabian Sea or the Gateway of India. Includes butler service and WiFi for four devices. </p>
+
+                    <div class="facilities">
+                        <span><i class="fas fa-building card-icon-building "></i>  33 sq mt</span><br>
+
+                        <span><i class="fas fa-wifi card-icon"></i>   Complimentary WiFi</span><br>
+                        <span><i class="fas fa-users card-icon"></i>  Upto 3 guests</span><br>
+                        <span><i class="fas fa-bed card-icon"></i>  King Size</span>
+
+
+                    </div>
+
+                    <div class="rate">
+                        <small class="text-muted">Starting Rate/Night</small><br>
+                        <span>20,825*</span><br>
+                        <button>View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="testimonials">
         <!--heading--->
         <div class="testimonial-heading">
             <span>Reviews</span>
@@ -176,7 +180,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i><!--Empty star-->
+                        <i class="far fa-star"></i>
+                        <!--Empty star-->
                     </div>
                 </div>
                 <!--Comments---------------------------------------->
@@ -206,7 +211,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i><!--Empty star-->
+                        <i class="fas fa-star"></i>
+                        <!--Empty star-->
                     </div>
                 </div>
                 <!--Comments---------------------------------------->
@@ -239,7 +245,7 @@
                         <i class="far fa-star"></i>
                     </div>
                 </div>
-               
+
                 <div class="client-comment">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates incidunt blanditiis sed atque cumque.</p>
                 </div>
@@ -274,45 +280,46 @@
                 </div>
             </div>
         </div>
-      </section>
+    </section>
 
-      <footer class="footer">
+    <footer class="footer">
         <div class="container">
-          <div class="row">
-            <div class="footer-col">
-              <h4>Taj Groups</h4>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Booking</a></li>
-                <li><a href="#">Restaurant</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>Get Help</h4>
-              <ul>
-                <li><a href="#">Contact No . 022 9897 2456</a</li>
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Taj Groups</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="/room_reservation">Booking</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">Contact No . 022 9897 2456</a</li>
                 <li><a href="#">Mail : hotels@gmail.com</a></li>
-              </ul>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci quia ab omnis id ipsum quae inventore </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-col">
-              <h4>Address</h4>
-              <ul>
-                <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci quia ab omnis id ipsum quae inventore </a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h4>follow us</h4>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-google"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </div>
-            </div>
-          </div>
         </div>
-     </footer>
-    
+    </footer>
+
 </body>
+
 </html>

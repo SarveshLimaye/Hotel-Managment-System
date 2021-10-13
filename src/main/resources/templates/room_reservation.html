@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/room_reservation.css" rel="stylesheet">
+    <link rel="icon" href="./Images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="card" style="background-color:black;">
+        <h1>Personal Details</h1>
+        <div class="elem-group">
+            <input type="text" id="name" name="visitor_name" placeholder="First Name" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+            <input type="text" id="name" name="visitor_name" placeholder="Last Name" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+            <input type="email" id="email" placeholder="Email" name="visitor_email" required>
+        </div>
+        <div class="elem-group">
+            <input type="tel" id="phone" name="visitor_phone" placeholder="Phone No." required>
+        </div>
+        <div class="elem-group ">
+            <input type="number" id="adult" name="total_adults" placeholder="No. of Adults" min="1" required>
+        </div>
+        <div class="elem-group ">
+            <input type="number" id="child" name="total_children" placeholder="No of Children" min="0" required>
+        </div>
+        <div class="elem-group">
+            <input type="date" id="checkin-date" name="check-in" placeholder="Check-in Date" required>
+        </div>
+        <div class="elem-group">
+            <input type="date" id="checkout-date" name="check-out" placeholder="Check-out Date" required>
+        </div>
+        <div class="elem-group">
+            <select id="room-selection" name="room_preference" placeholder="Check Room Preference" required>
+              <option value="">Choose a Room from the List</option>
+              <option value="">Luxury Room</option>
+              <option value="">Luxury Grande Room City View</option>
+              <option value="">Luxury Grande Room Sea View </option>
+          </select>
+        </div>
+        <div class="elem-group">
+            <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+        </div>
+        <button type="submit">Book</button>
+    </div>
+
+</html>
