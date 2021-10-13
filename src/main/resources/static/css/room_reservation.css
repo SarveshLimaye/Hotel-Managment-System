@@ -1,0 +1,63 @@
+h1 {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
+
+body {
+    max-width: 50px;
+    margin: 0 auto;
+    padding-left: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-image: url(\resources\assets\hotel.jpg);
+    float: center;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+label {
+    display: block;
+    font-family: 'Arial';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+}
+
+input,
+select,
+textarea {
+    border-radius: 2.2px;
+    font-size: 1.25em;
+    font-family: 'Arial';
+    width: 100%;
+    padding: 10px;
+}
+
+div.elem-group {
+    width: 95%;
+    display: inline-block;
+    padding: 10px;
+}
+
+textarea {
+    height: 250px;
+}
+
+hr {
+    border: 1px dotted #ccc;
+}
+
+button {
+    height: 51px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 1.254em;
+    font-family: 'Arial';
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 2.1px solid white;
+}
