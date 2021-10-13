@@ -12,7 +12,7 @@
     height: 500px;
     /* border-radius: 30px; */
     border: 1px solid #BFBFBF;
-    background-color: white;
+    background: #000;
     box-shadow: 5px 5px 5px 4px #aaaaaa;
 }
 .form_head{
@@ -21,31 +21,41 @@
     font-family: 'Slabo 27px', serif;
     left: 50px;
     top: 30px;
+    color: #fff;
 }
 .head_follow{
     position: relative;
     top: 0px;
     left:52px;
+    color: #fff;
     
 }
 .email_heading{
     position:relative;
     top: 10px;
     left: 50px;
+    color: #fff;
+}
+
+input:focus{
+    color: #fff;
 }
 .form_info input{
     position:relative;
-    border:1px solid black;
+    border:1px solid #fff;
+    
     width: 300px;
     height: 30px;
     left: 50px;
+
+
 }.form_info button{
     position:relative;
     top:50px;
     left:50px;    
     width:300px;
     height:40px;
-    background-color: rgba(0, 94, 255, 0.857);
+    background-image: linear-gradient(to right,#F26FC9, #8772EF);
     /* border-radius: 10px; */
     cursor:pointer;
     font-weight: bolder;
@@ -53,7 +63,7 @@
     font-size:1.2rem;
 }
 .form_info button:hover{
-    background-color: rgb(0, 94, 255);
+    color: green;
 }
 .main_form{
     border: 1px solid black;
@@ -88,6 +98,8 @@
     /* border:20px; */
     margin:15px;
     border: 1px solid black;
+    color: #fff;
+    background-image: linear-gradient(to right,#F26FC9, #8772EF);
     align-items:center;
     font-size: 1.2rem;
     padding:2px;
@@ -99,6 +111,16 @@
     font-size: 1.6rem;
     align-items:center;
 }
+
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffff;
+    background: transparent;
+    color: #ffff;
+    height: 40px;
+}
 .text_holder{
     position:relative;
     left:40px;
@@ -106,7 +128,7 @@
 }
 .button_container button:hover{
     background-color:rgba(73, 73, 73, 0.299);
-    color:white;
+    color:green;
 }
 .bottom_ins{
     position: relative;

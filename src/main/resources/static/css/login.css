@@ -5,6 +5,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;  */
     font-family: sans-serif; 
+    font-size: medium;
 }
 .socials{
     margin: 50px 70px 50px 80px;
@@ -76,7 +77,8 @@ body{
 }
 .sign_up:hover{
 	cursor: pointer;
-    box-shadow: 1px 1px 10px #696969;
+    box-shadow: 10px 10px 10px #000;
+    color: aqua;
 }
 .sign_up a{
 	text-decoration:none;
@@ -85,16 +87,18 @@ body{
     right:100px;
 }
 a{
-    display: block;
-    text-align: right;
+    display:block;
     text-decoration: none;
+     line-height: 35px;
+    align-items: center;
+    text-align: center;
     color: #fff;
     font-size: 12px;
     margin-top: 10px;
 }
 
 button:hover{
-    color: #F26FC9;
+    backgroundcolor: chartreuse;
     
 }
 
@@ -105,3 +109,4 @@ button{
 .social-icon:hover{
     color: violet;
 }
+
