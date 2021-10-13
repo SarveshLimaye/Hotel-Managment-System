@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Hyatt Palace-Restaurant</title>
+<link rel="stylesheet" type="text/css" href="/css/restaurant.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/hotel.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand  " href="/hotel">HYATT PALACE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/hotel">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/room_reservation">Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/facilities">Facilities</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/restaurant">Restaurant</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+    <div class="heading_container">
+        <h1>Dining: </h1>
+        <h4>
+            The Hyatt Palace, Mumbai, has some of the most renowned fine-dining restaurants in India. Discover tantalising Indian, Middle Eastern and cuisines, served with a dash of tradition and a sprinkling of innovation.
+        </h4>
+    </div>
+    <div class="cards_conatiner">
+        <div class="restaurant_card">
+            <div class="image_container">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/f2/a9/6c/masala-kraft.jpg" alt="Sample Display Photo">
+            </div>
+            <div class="text_container">
+                <div class="name_container">
+                    <h4>Masala Kraft</h4>
+                </div>
+                <div class="location_container">
+                    <i class="fas fa-map-marker-alt">Apollo Bunder,Mumbai,India</i>
+                </div>
+                <div class="general_info">
+                    <div class="restacontact_info">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact_no">+91-22-6665-3278</div>
+                        <div class="menu_card"><a href="">View Menu</a></div>
+                        <div class="cuisine_info">
+                            The speciality Indian restaurant where hand ground spices and traditional recipes spell magic on one’s palate blending culinary innovations with traditional methods.
+                        </div>
+                    </div>
+                </div>
+                <div class="extra_info">
+                    <div class="left">Cuisine - Contemporary Indian​</div>
+                    <div>Dress code - Smart Casual</div>
+                    <div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+                    <div>Dinner - 7:00 PM to 11:45 PM</div>
+                </div>
+                <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="restaurant_card">
+            <div class="image_container">
+                <img src="https://b.zmtcdn.com/data/pictures/2/38472/909a199f49be83f120a7643faaffed4f.jpg?fit=around|750:500&crop=750:500;*,*" alt="Sample Display Photo">
+            </div>
+            <div class="text_container">
+                <div class="name_container">
+                    <h4>Golden Dragon</h4>
+                </div>
+                <div class="location_container">
+                    <i class="fas fa-map-marker-alt">Apollo Bunder,Mumbai,India</i>
+                </div>
+                <div class="general_info">
+                    <div class="restacontact_info">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact_no">+91-22-6665-3278</div>
+                        <div class="menu_card"><a href="">View Menu</a></div>
+                        <div class="cuisine_info">
+                            This illustrious restaurant is famous for its delectable Sichuan and Cantonese cuisines, and its unique live kitchen.
+                        </div>
+                    </div>
+                </div>
+                <div class="extra_info">
+                    <div class="left">Cuisine - Chinese​</div>
+                    <div>Dress code - Smart Casual</div>
+                    <div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+                    <div>Dinner - 7:00 PM to 11:45 PM</div>
+                </div>
+                <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div>
+            </div>
+        </div>
+        <div class="restaurant_card">
+            <div class="image_container">
+                <img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/600X333/restaurant%2F223193%2Frestaurant120180620125438.jpg" alt="Sample Display Photo">
+            </div>
+            <div class="text_container">
+                <div class="name_container">
+                    <h4>Shamiana</h4>
+                </div>
+                <div class="location_container">
+                    <i class="fas fa-map-marker-alt">Apollo Bunder,Mumbai,India</i>
+                </div>
+                <div class="general_info">
+                    <div class="restacontact_info">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact_no">+91-22-6665-3278</div>
+                        <div class="menu_card"><a href="">View Menu</a></div>
+                        <div class="cuisine_info">
+                            Shamiana, the original coffee shop of the city, offers an all-day dining experience with an international à la carte menu to suit every mood and palate, from breakfast through to dinner.
+                        </div>
+                    </div>
+                </div>
+                <div class="extra_info">
+                    <div class="left">Cuisine - Multi Cuisine​</div>
+                    <div>Dress code - Smart Casual</div>
+                    <div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+                    <div>Dinner - 7:00 PM to 11:45 PM</div>
+                </div>
+                <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div>
+            </div>
+        </div>
+        <div class="restaurant_card">
+            <div class="image_container">
+                <img src="https://static.toiimg.com/thumb/msid-24483292,width-550,height-433/24483292.jpg" alt="Sample Display Photo">
+            </div>
+            <div class="text_container">
+                <div class="name_container">
+                    <h4>Wasabi By Morimoto</h4>
+                </div>
+                <div class="location_container">
+                    <i class="fas fa-map-marker-alt">Apollo Bunder,Mumbai,India</i>
+                </div>
+                <div class="general_info">
+                    <div class="restacontact_info">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact_no">+91-22-6665-3278</div>
+                        <div class="menu_card"><a href="">View Menu</a></div>
+                        <div class="cuisine_info">
+                            The speciality Indian restaurant where hand ground spices and traditional recipes spell magic on one’s palate blending culinary innovations with traditional methods.
+                        </div>
+                    </div>
+                </div>
+                <div class="extra_info">
+                    <div class="left">Cuisine - Japanese</div>
+                    <div>Dress code - Smart Casual</div>
+                    <div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+                    <div>Dinner - 7:00 PM to 11:45 PM</div>
+                </div>
+                <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div>
+            </div>
+        </div>
+        <div class="restaurant_card">
+            <div class="image_container">
+                <img src="https://cdn.venuelook.com/uploads/space_4405/1439895245_595x400.png" alt="Sample Display Photo">
+            </div>
+            <div class="text_container">
+                <div class="name_container">
+                    <h4>La Patisserie</h4>
+                </div>
+                <div class="location_container">
+                    <i class="fas fa-map-marker-alt">Apollo Bunder,Mumbai,India</i>
+                </div>
+                <div class="general_info">
+                    <div class="restacontact_info">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact_no">+91-22-6665-3278</div>
+                        <div class="menu_card"><a href="">View Menu</a></div>
+                        <div class="cuisine_info">
+                            The speciality Indian restaurant where hand ground spices and traditional recipes spell magic on one’s palate blending culinary innovations with traditional methods.
+                        </div>
+                    </div>
+                </div>
+                <div class="extra_info">
+                    <div class="left">Cuisine - Bakery & Delicatessen​</div>
+                    <div>Dress code - Smart Casual</div>
+                    <div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+                    <div>Dinner - 7:00 PM to 11:45 PM</div>
+                </div>
+                <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div>
+            </div>
+        </div>
+        <div class="restaurant_card">
+            <div class="image_container">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/f2/ac/4d/sea-lounge.jpg" alt="Sample Display Photo">
+            </div>
+            <div class="text_container">
+                <div class="name_container">
+                    <h4>Sea Lounge</h4>
+                </div>
+                <div class="location_container">
+                    <i class="fas fa-map-marker-alt">Apollo Bunder,Mumbai,India</i>
+                </div>
+                <div class="general_info">
+                    <div class="restacontact_info">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact_no">+91-22-6665-3278</div>
+                        <div class="menu_card"><a href="">View Menu</a></div>
+                        <div class="cuisine_info">
+                            The speciality Indian restaurant where hand ground spices and traditional recipes spell magic on one’s palate blending culinary innovations with traditional methods.
+                        </div>
+                    </div>
+                </div>
+                <div class="extra_info">
+                    <div class="left">Cuisine - Finger food​</div>
+                    <div>Dress code - Smart Casual</div>
+                    <div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+                    <div>Dinner - 7:00 PM to 11:45 PM</div>
+                </div>
+                <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Taj Groups</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="/room_reservation">Booking</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">Contact No . 022 9897 2456</a></li>
+                <li><a href="#">Mail : hotels@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci quia ab omnis id ipsum quae inventore </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
