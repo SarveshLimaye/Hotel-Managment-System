@@ -27,4 +27,8 @@ public String room_reservation(){
 public String facilities(){
 	return "facilities";
 }
+@RequestMapping(value={"/restaurant"})
+public String restaurant(){
+	return "restaurant";
+}
 }

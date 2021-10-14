@@ -141,3 +141,11 @@ input{
     text-decoration: none;
     color: rgb(0, 94, 255);
 }
+.add_user a{
+	text-decoration: none;
+	color: white;
+}
+.add_user a:hover{
+	text-decoration: none;
+	color: green;
+}
