@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hyatt Palace-Book A room now</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/room_reservation.css" rel="stylesheet">
+    <link rel="icon" href="./Images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <a class="navbar-brand  " href="/hotel">HYATT PALACE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/hotel">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/room_reservation">Booking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/facilities">Facilities</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/restaurant">Restaurant</a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <div class="card bg-dark border-secondary mb-3" style="max-height:500px;max-width:1000px;padding-left:100px;">
+        <h1>Personal Details</h1>
+        <div class="row">
+            <div class="column">
+                <div class="elem-group">
+                    <input type="text" id="name" name="visitor_name" placeholder="First Name" pattern=[A-Z\sa-z]{3,20} required>
+                </div>
+                <div class="elem-group">
+                    <input type="text" id="name" name="visitor_name" placeholder="Last Name" pattern=[A-Z\sa-z]{3,20} required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="elem-group">
+                    <input type="email" id="email" placeholder="Email" name="visitor_email" required>
+                </div>
+                <div class="elem-group">
+                    <input type="tel" id="phone" name="visitor_phone" placeholder="Phone No." required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="elem-group ">
+                    <input type="number" id="adult" name="total_adults" placeholder="No. of Adults" min="1" required>
+                </div>
+                <div class="elem-group ">
+                    <input type="number" id="child" name="total_children" placeholder="No of Children" min="0" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="elem-group">
+                    <input type="date" id="checkin-date" name="check-in" placeholder="Check-in Date" required>
+                </div>
+                <div class="elem-group">
+                    <input type="date" id="checkout-date" name="check-out" placeholder="Check-out Date" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="elem-group">
+                    <select id="room-selection" name="room_preference" placeholder="Check Room Preference" required>
+                         <option value="">Choose a Room from the List</option>
+                         <option value="">Standard</option>
+                         <option value="">Superior</option>
+                         <option value="">Junior Suite</option>
+                         <option value="">Executive Suite</option>
+                    </select>
+                </div>
+                <div class="elem-group">
+                    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+                </div>
+                <div class="elem-group1">
+                    <button type="submit">Book</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Taj Groups</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="/room_reservation">Booking</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">Contact No . 022 9897 2456</a</li>
+                <li><a href="#">Mail : hotels@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci quia ab omnis id ipsum quae inventore </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
