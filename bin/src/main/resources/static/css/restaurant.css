@@ -1,0 +1,177 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Slabo 27px', serif;
+    /* background-image: radial-gradient(rgba(241, 135, 135, 0.347),rgba(245, 205, 231, 0.231)),url("http://www.dineout.co.in/blog/wp-content/uploads/2018/02/La-Cucina-@-Hyatt-Regency-1-700x394.jpg"); */
+    background-position: top;
+    background-size: cover;
+}
+.heading_container{
+    position: relative;
+    top: 50px;
+    left: 50px;
+    /* border: 3px solid black; */
+    width: 1400px;
+    height: 200px;
+}
+.heading_container h1{
+    font-size:2.8rem;
+}
+.heading_container h4{
+    position: relative;
+    top:30px;
+    text-align:center;
+    font-size: 1.6rem;
+}
+.cards_conatiner{
+    /* border: 3px solid black; */
+    position: relative;
+    width: 1400px;
+    height: 500px;
+    top: 50px;
+    left: 50px;
+    padding:20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
+}
+.restaurant_card{
+    /* border: 3px solid black; */
+    position: relative;
+    width: 1260px;
+    height: 320px;
+    background-color:rgba(62, 62, 62, 0.068);
+    /* color: white; */
+    margin-bottom: 100px;
+    left: 50px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px 4px #aaaaaa;
+}
+.image_container{
+    /* border: 3px solid white; */
+    position: inherit;
+    /* top: 50px; */
+    width: 250px;
+    height: 100%;
+    top: 10%;
+    left: 20px;
+    align-items: center;
+    
+}
+.image_container img{
+    width: 100%;
+    height: 80%;
+}
+.location_container{
+    /* border:1px solid black; */
+    width:400px;  
+    position:relative;
+    /* left: 50px;   */
+    height: 20px;
+    top:0px;
+    /* border-right:2px solid black; */
+    color: rgba(0, 0, 0, 0.537);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.name_container{
+    /* border:1px solid black;  */
+    position:relative;
+    width:500px;
+    top:0px;
+    /* left:45px; */
+    /* height: 40px; */
+    font-size:2.4rem;
+    font-weight: bolder;
+}
+.text_container{
+    /* border:1px solid black; */
+    position: relative;
+    width: 900px;
+    left: 300px;
+    bottom: 295px;
+    height: 200px;
+}
+.restacontact_info i{
+    /* border:1px solid black; */
+    /* width:180px;   */
+    position:relative;
+    /* left: 50px;  */
+    width: 15px;
+    top: 20px; 
+    height: 20px;
+    color: rgba(0, 0, 0, 0.537);
+    /* border-right:2px solid black;*/
+}
+/* .restacontact_info{
+    display: flex;
+    justify-content: space-between;
+} */
+.contact_no{
+    position: relative;
+    left: 20px; 
+    bottom:5px;
+    border-right:2px solid black;
+    width: 120px;
+}
+.menu_card a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.537);
+    font-weight: 600;
+    position: relative;
+    left:150px;
+    bottom:25px;
+}
+.cuisine_info{
+    position: relative;
+    bottom: 10px;
+}
+.extra_info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.left{
+    border-right:1px solid black;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    width: 300px;
+    left: 100px;
+}
+.reservation{
+    /* border: 1px solid black; */
+    position:relative;
+    width:210px;
+    height:40px;
+    left:750px;
+    /* bottom: 200px; */
+    align-items: center;
+    line-height:40px;
+    font-size:1.4rem;
+    background-color:rgb(255, 217, 4);
+    bottom: 50px;
+    
+}
+.reservation a{
+    text-decoration: none;
+    color:black;
+    position: relative;
+    align-items: center;
+    left: 20px;
+    font-weight: bolder;
+    /* color: rgba(62, 62, 62, 0.068); */
+}
+.reservation a:hover{
+    /* background-color:rgba(62, 62, 62, 0.068);
+    border:1px solid black; */
+    color:white;
+    text-decoration: none;
+}
+footer{
+	position: relative;
+	top:2000px;	
+}

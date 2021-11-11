@@ -34,10 +34,10 @@
                     <div class="button_container">
                         <button>
                             <div class="icon_holder">
-                              <i class="fab fa-google"></i>
+                                <i class="fab fa-google"></i>
                             </div>
                             <div class="text_holder">
-                                <a href="/oauth2/authorization/google">Continue with Google</a>
+                                Continue with Google
                             </div>
                         </button>
                         <button>
@@ -45,7 +45,7 @@
                                 <i class="fab fa-facebook"></i>
                             </div>
                             <div class="text_holder">
-                               <a  href="/oauth2/authorization/facebook"> Continue with facebook </a>
+                                Continue with facebook
                             </div>
                         </button>
                         <button>
@@ -53,7 +53,7 @@
                                 <i class="fab fa-twitter"></i>
                             </div>
                             <div class="text_holder">
-                              <a>Continue with twitter</a>
+                                Continue with twitter
                             </div>
                         </button>
                     </div>
@@ -65,12 +65,5 @@
             </div>
         </form>
     </div>
-    <script type="text/javascript">
-    $.get("/user", function(data) {
-        $("#user").html(data.name);
-        $(".unauthenticated").hide()
-        $(".authenticated").show()
-    });
-</script>
 </body>
 </html>
