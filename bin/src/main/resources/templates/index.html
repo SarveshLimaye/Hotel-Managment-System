@@ -6,16 +6,20 @@
         
         <link rel="stylesheet" href="css/login.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
+        
+    
     </head>
     <body>
-        <div class="login-container">
+        <div class="login-container unauthenticated">
             <!-- <img src="assets/avatar.jpg" alt="avatar image"> -->
             <form action="">
                 <h1>LOGIN</h1>
                 <div class="socials">
-                    <i class="fab fa-google fa-2x social-icon"></i>
-                    <i class="fab fa-facebook fa-2x social-icon"></i>
-                    <i class="fab fa-twitter-square fa-2x social-icon"></i>
+                   <a href="/oauth2/authorization/google"><i class="fab fa-google fa-2x social-icon"></i></a>
+                   <a href="/oauth2/authorization/facebook"> <i class="fab fa-facebook fa-2x social-icon"></i></a>
+                    <a><i class="fab fa-twitter-square fa-2x social-icon"></i></a>
                 </div>
                 <div>
                     <label>Username</label>
@@ -31,5 +35,14 @@
                
             </form>
         </div>
+        
+       
     </body>
+    <script type="text/javascript">
+    $.get("/user", function(data) {
+        $("#user").html(data.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+</script>
 </html>

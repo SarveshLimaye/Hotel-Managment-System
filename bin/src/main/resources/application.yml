@@ -1,16 +1,4 @@
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    url: jdbc:mysql://localhost:3306/hotel_management_test?serverTimezone=UTC
-    password: root
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-    hibernate:
-      ddl-auto: update
-
   security:
     oauth2:
       client:

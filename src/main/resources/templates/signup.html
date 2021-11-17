@@ -10,21 +10,37 @@
     <div class="main_form">
         <h4 class="form_head">Create an account</h4>
         <h4 class="head_follow">Add a strong password to finish up</h4>
-        <form action="">
+        <form th:action="@{/do_register}" method="post" th:object="${user}">
             <div class="left_side">
                 <div class="form_info">
                     <h3 class="email_heading">Email Address:</h3>
-                    <input type="email" placeholder="Email">
+                    <input 
+                    name="email"
+                    type="email" 
+                    placeholder="Email"
+                    required
+                    th:value="${user.email}"
+                    >
                 </div>
                 <div class="form_info">
                     <h3 class="email_heading">Password:</h3>
-                    <input type="password" placeholder="password">
+                    <input 
+                    name="password"
+                    type="password" 
+                    placeholder="password"
+                    required
+                    >
+                </div>
+                <div th:if="${session.message}" class="success_msg">
+                	Registration Successful
+                <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+                
                 </div>
                 <div class="form_info">
-                    <button class="add_user">
-                        <a href="/hotel">
+                    <button class="add_user" type="submit">
+                        
                             Register
-                        </a>
+                       
                     </button>
                 </div>
             </div>
