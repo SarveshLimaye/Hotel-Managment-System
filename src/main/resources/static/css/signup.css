@@ -149,3 +149,10 @@ input{
 	text-decoration: none;
 	color: green;
 }
+.success_msg{
+	font-size: 1.2rem;
+	color: green;
+	position: relative;
+	left: 50px;
+	top: 130px;
+}
