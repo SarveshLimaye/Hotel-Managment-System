@@ -5,8 +5,10 @@ package com.example.demo.controller;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 //import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,12 +27,17 @@ import com.example.demo.helper.Message;
 public class TestController {
 	
 @Autowired
+private BCryptPasswordEncoder passwordEncoder;
+	
+
+	
+@Autowired
 private UserRepository userRepository;	
 	
 	
 @RequestMapping(value={"/","home"})
 public String start() {
-	return "index";
+	return "hotel";
 }
 
 @RequestMapping(value= {"/signup"})
@@ -44,6 +51,11 @@ public String signup(Model model) {
 public String hotel() {
 	return "hotel";
 }
+
+@GetMapping("/login")
+public String login() {
+	return "login";
+}
 @RequestMapping(value={"/room_reservation"})
 public String room_reservation(){
 	return "room_reservation";
@@ -56,6 +68,13 @@ public String facilities(){
 public String restaurant(){
 	return "restaurant";
 }
+
+@RequestMapping(value={"/user/data"})
+public String userdashboard(){
+	return "userdashboard";
+}
+
+
 
 //@Autowired
 //private UserRepository userRepository;
@@ -81,6 +100,7 @@ public String registerUser(@ModelAttribute("user") User user,Model model,HttpSes
 	
 	user.setRole("ROLE_USER");
 	user.setEnabled(true);
+	user.setPassword(passwordEncoder.encode(user.getPassword()));
 	System.out.println("USER "+user);
 	
 	User result= this.userRepository.save(user);

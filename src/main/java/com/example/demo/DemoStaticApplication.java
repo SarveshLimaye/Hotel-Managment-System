@@ -36,40 +36,42 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @SpringBootApplication
 public class DemoStaticApplication extends WebSecurityConfigurerAdapter {
-	 @GetMapping("/user")
-	    public Map<String, Object> user(@AuthenticationPrincipal OAuth2User principal) {
-	        return Collections.singletonMap("name", principal.getAttribute("name"));
-	    }
+//	 @GetMapping("/user")
+//	    public Map<String, Object> user(@AuthenticationPrincipal OAuth2User principal) {
+//	        return Collections.singletonMap("name", principal.getAttribute("name"));
+//	    }
 
 	public static void main(String[] args) {
 		
 		SpringApplication.run(DemoStaticApplication.class, args);
 		
 	}
-	 @Override
-	    protected void configure(HttpSecurity http) throws Exception {
-	    	// @formatter:off
-	        http
-	            .authorizeRequests(a -> a
-	                .antMatchers("/", "/error","/signup","/css/**", "/webjars/**").permitAll()
-	                .anyRequest().authenticated()
-	            )
-	            .exceptionHandling(e -> e
-	                .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
-	            );
-	            http.oauth2Login()
-	            .loginPage("/login")
-	            .successHandler(new AuthenticationSuccessHandler() {
-	         
-	                @Override
-	                public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
-	                        Authentication authentication) throws IOException, ServletException {
-	         
-	                    response.sendRedirect("/hotel");
-	                }
-	            });
-
-	            
-	        // @formatter:on
-	    }
+//	 @Override
+//	    protected void configure(HttpSecurity http) throws Exception {
+//	    	// @formatter:off
+//	        
+//		 
+//		 http
+//	            .authorizeRequests(a -> a
+//	                .antMatchers("/", "/error","/signup","/css/**", "/webjars/**").permitAll()
+//	                .anyRequest().authenticated()
+//	            )
+//	            .exceptionHandling(e -> e
+//	                .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED))
+//	            );
+//	            http.oauth2Login()
+//	            .loginPage("/login")
+//	            .successHandler(new AuthenticationSuccessHandler() {
+//	         
+//	                @Override
+//	                public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
+//	                        Authentication authentication) throws IOException, ServletException {
+//	         
+//	                    response.sendRedirect("/hotel");
+//	                }
+//	            });
+//
+//	            
+//	        // @formatter:on
+//	    }
 }

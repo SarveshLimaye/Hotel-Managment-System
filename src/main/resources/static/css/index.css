@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif; 
+    font-size: medium;
+}
+.socials{
+    margin: 50px 70px 50px 80px;
+    align-items: center;
+}
+
+.social-icon{
+    margin: 5px 5px;
+}
+.login-container{
+    width: 370px;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+
+.login-container h1{
+    text-align: center;
+    font-size: 20px;
+}
+
+.login-container label{
+    display: block;
+}
+
+.login-container div{
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"], input[type="password"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffff;
+    background: transparent;
+    color: #ffff;
+    height: 40px;
+}
+
+.login-container button[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background-image: linear-gradient(to right,#F26FC9, #8772EF);
+    color: #ffff;
+    
+}
+.login-container button[type="submit"]:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #696969;
+}
+.sign_up{
+	width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background-image: linear-gradient(to right,#F26FC9, #8772EF);
+    color: #ffff;
+    align-items:center;
+    right:100px;
+}
+.sign_up:hover{
+	cursor: pointer;
+    box-shadow: 10px 10px 10px #000;
+    color: aqua;
+}
+.sign_up a{
+	text-decoration:none;
+	color: #ffff;
+	align-items:center;
+    right:100px;
+}
+a{
+    display:block;
+    text-decoration: none;
+     line-height: 35px;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+button:hover{
+    backgroundcolor: chartreuse;
+    
+}
+
+button{
+    margin-top: 1rem;
+}
+
+.social-icon:hover{
+    color: violet;
+}
+
