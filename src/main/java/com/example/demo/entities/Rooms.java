@@ -1,6 +1,6 @@
 package com.example.demo.entities;
 
-import java.util.Date;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,10 +17,17 @@ public class Rooms {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int rId;
-	private String name;
-	private Date checkinDate;
-	private Date checkoutDate;
+	private String first_name;
+	private String last_name;
+	private String email;
+	private String phone_no;
+	private String checkinDate;
+	private String checkoutDate;
 	private int price;
+	private int adults;
+	private int children;
+	private String category;
+	private String special_instructions;
 	
 	@ManyToOne
 	private User user;
@@ -32,22 +39,30 @@ public class Rooms {
 	public void setrId(int rId) {
 		this.rId = rId;
 	}
-	public String getName() {
-		return name;
+	
+	public String getEmail() {
+		return email;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setEmail(String email) {
+		this.email = email;
 	}
-	public Date getCheckinDate() {
+	
+	public String getPhone_no() {
+		return phone_no;
+	}
+	public void setPhone_no(String phone_no) {
+		this.phone_no = phone_no;
+	}
+	public String getCheckinDate() {
 		return checkinDate;
 	}
-	public void setCheckinDate(Date checkinDate) {
+	public void setCheckinDate(String checkinDate) {
 		this.checkinDate = checkinDate;
 	}
-	public Date getCheckoutDate() {
+	public String getCheckoutDate() {
 		return checkoutDate;
 	}
-	public void setCheckoutDate(Date checkoutDate) {
+	public void setCheckoutDate(String checkoutDate) {
 		this.checkoutDate = checkoutDate;
 	}
 	public int getPrice() {
@@ -62,6 +77,50 @@ public class Rooms {
 	public void setUser(User user) {
 		this.user = user;
 	}
+	public String getFirst_name() {
+		return first_name;
+	}
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+	public String getLast_name() {
+		return last_name;
+	}
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+	public int getAdults() {
+		return adults;
+	}
+	public void setAdults(int adults) {
+		this.adults = adults;
+	}
+	public int getChildren() {
+		return children;
+	}
+	public void setChildren(int children) {
+		this.children = children;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public String getSpecial_instructions() {
+		return special_instructions;
+	}
+	public void setSpecial_instructions(String special_instructions) {
+		this.special_instructions = special_instructions;
+	}
+	@Override
+	public String toString() {
+		return "Rooms [rId=" + rId + ", first_name=" + first_name + ", last_name=" + last_name + ", email=" + email
+				+ ", phone_no=" + phone_no + ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate
+				+ ", price=" + price + ", adults=" + adults + ", children=" + children + ", category=" + category
+				+ ", special_instructions=" + special_instructions + ", user=" + user + "]";
+	}
+	
 	
 	
 }
