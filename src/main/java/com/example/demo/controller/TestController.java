@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 
 
+import java.security.Principal;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +16,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.demo.dao.RoomRepository;
 import com.example.demo.dao.UserRepository;
+import com.example.demo.entities.Rooms;
 import com.example.demo.entities.User;
 import com.example.demo.helper.Message;
 //import org.springframework.web.bind.annotation.ResponseBody;
@@ -34,7 +38,10 @@ private BCryptPasswordEncoder passwordEncoder;
 @Autowired
 private UserRepository userRepository;	
 	
-	
+@Autowired
+private RoomRepository roomRepository;	
+
+
 @RequestMapping(value={"/","home"})
 public String start() {
 	return "hotel";
@@ -57,8 +64,10 @@ public String login() {
 	return "login";
 }
 @RequestMapping(value={"/room_reservation"})
-public String room_reservation(){
+public String room_reservation(Model model){
+	model.addAttribute("rooms",new Rooms());
 	return "room_reservation";
+
 }
 @RequestMapping(value={"/facilities"})
 public String facilities(){
@@ -110,5 +119,24 @@ public String registerUser(@ModelAttribute("user") User user,Model model,HttpSes
 	return "signup";
 }
 
+@RequestMapping(value= {"/process_reservation"},method=RequestMethod.POST)
+public String reserveRoom(@ModelAttribute("rooms") Rooms rooms,Model model,HttpSession session,Principal principal) {
+	
+	String name = principal.getName();
+	User user=this.userRepository.getUserByUserName(name);
+	
+	user.getRooms().add(rooms);
+	
+	System.out.println("Rooms "+rooms);
+	
+	Rooms reservation=this.roomRepository.save(rooms);
+	  
+	
+	model.addAttribute("rooms", new Rooms());
+	session.setAttribute("message", new Message("Successfully Registered","alert-success"));
+	return "room_reservation";
+}
+
 
 }
+  
