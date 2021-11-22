@@ -42,7 +42,7 @@ private UserRepository userRepository;
 private RoomRepository roomRepository;	
 
 
-@RequestMapping(value={"/","home"})
+@RequestMapping(value={"/","home"},method=RequestMethod.POST)
 public String start() {
 	return "hotel";
 }
@@ -54,15 +54,12 @@ public String signup(Model model) {
 	return "signup";
 }
 
-@RequestMapping(value= {"/hotel"})
+@RequestMapping(value= {"/hotel"},method=RequestMethod.GET)
 public String hotel() {
 	return "hotel";
 }
 
-@GetMapping("/login")
-public String login() {
-	return "login";
-}
+
 @RequestMapping(value={"/room_reservation"})
 public String room_reservation(Model model){
 	model.addAttribute("rooms",new Rooms());
@@ -81,6 +78,11 @@ public String restaurant(){
 @RequestMapping(value={"/user/data"})
 public String userdashboard(){
 	return "userdashboard";
+}
+
+@RequestMapping(value={"/logout"})
+public String logout(){
+	return "logout";
 }
 
 

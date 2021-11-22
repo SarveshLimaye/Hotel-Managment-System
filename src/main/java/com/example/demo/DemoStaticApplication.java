@@ -35,7 +35,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 //import com.example.demo.entities.User;
 
 @SpringBootApplication
-public class DemoStaticApplication extends WebSecurityConfigurerAdapter {
+public class DemoStaticApplication  {
 //	 @GetMapping("/user")
 //	    public Map<String, Object> user(@AuthenticationPrincipal OAuth2User principal) {
 //	        return Collections.singletonMap("name", principal.getAttribute("name"));
@@ -70,7 +70,7 @@ public class DemoStaticApplication extends WebSecurityConfigurerAdapter {
 //	                    response.sendRedirect("/hotel");
 //	                }
 //	            });
-//
+
 //	            
 //	        // @formatter:on
 //	    }
