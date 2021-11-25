@@ -72,6 +72,7 @@ input:focus{
     border-right: 1px solid rgba(0, 0, 0, 0.265);
     width: 420px;
     height: 260px;
+    left: 200px;
     position: relative;
     
 }
@@ -132,7 +133,7 @@ input{
 }
 .bottom_ins{
     position: relative;
-    bottom: 250px;
+    bottom: -50px;
     left: 50px;
     font-weight:600;
     color:rgba(0, 0, 0, 0.585);
@@ -153,6 +154,6 @@ input{
 	font-size: 1.2rem;
 	color: green;
 	position: relative;
-	left: 50px;
-	top: 130px;
+	left: -100px;
+	top: 140px;
 }
