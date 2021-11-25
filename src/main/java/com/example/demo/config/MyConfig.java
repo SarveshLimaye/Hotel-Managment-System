@@ -57,7 +57,7 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/").hasRole("USER").antMatchers("/admin").hasRole("ADMIN")
+		http.authorizeRequests().antMatchers("/").hasRole("USER").antMatchers("/admin").hasRole("ADMIN").antMatchers("/employee").hasRole("EMPLOYEE")
 .and().formLogin()
 		.loginPage("/login")
 		.permitAll().successHandler(new AuthenticationSuccessHandler() {
@@ -72,6 +72,9 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
                     targetUrl = "/hotel";
                 } else if(role.contains("ADMIN")) {
                     targetUrl = "/admin";
+                }
+                else if(role.contains("EMPLOYEE")) {
+                    targetUrl = "/employee";
                 }
                 
                 response.sendRedirect(targetUrl);
