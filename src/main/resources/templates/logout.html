@@ -10,8 +10,10 @@
      
      <body>
      <div class="logout">
-     <h1>Sure you want to logout ?</h1>
-     <a href="/login">Logout</a>
+     <form th:action="@{/logout}" method="post">
+             <h1>Sure you want to logout ?</h1>
+-     <a href="/login">Logout</a>
+        </form>
      </div>
      
      </body>

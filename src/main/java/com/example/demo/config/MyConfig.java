@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -17,6 +18,7 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
@@ -24,6 +26,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
+
 public class MyConfig extends WebSecurityConfigurerAdapter {
 	
 	@Bean
@@ -54,7 +57,7 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/admin/**").hasRole("ADMIN").antMatchers("/").hasRole("USER")
+		http.authorizeRequests().antMatchers("/").hasRole("USER").antMatchers("/admin").hasRole("ADMIN")
 .and().formLogin()
 		.loginPage("/login")
 		.permitAll().successHandler(new AuthenticationSuccessHandler() {
@@ -62,8 +65,16 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
             @Override
             public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
                     Authentication authentication) throws IOException, ServletException {
-     
-                response.sendRedirect("/hotel");
+            	 Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+            	String role = auth.getAuthorities().toString();
+            	String targetUrl = "";
+                if(role.contains("USER")) {
+                    targetUrl = "/hotel";
+                } else if(role.contains("ADMIN")) {
+                    targetUrl = "/admin";
+                }
+                
+                response.sendRedirect(targetUrl);
             }
         }).and().csrf().disable();
 	
@@ -75,5 +86,7 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
 	    web.ignoring().antMatchers("/signup").antMatchers("/css/**").antMatchers("/do_register").antMatchers("/logout");
 	   
 	}
+	
+	
 
 }

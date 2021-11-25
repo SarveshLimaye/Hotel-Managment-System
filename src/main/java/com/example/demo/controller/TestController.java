@@ -3,6 +3,7 @@ package com.example.demo.controller;
 
 
 import java.security.Principal;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -83,6 +84,13 @@ public String userdashboard(){
 @RequestMapping(value={"/logout"})
 public String logout(){
 	return "logout";
+}
+
+@RequestMapping(value={"/admin"},method=RequestMethod.GET)
+public String admin(Model model){
+	 List<User> listUsers = userRepository.findAll();
+	 model.addAttribute("listUsers", listUsers);
+	return "admin";
 }
 
 
