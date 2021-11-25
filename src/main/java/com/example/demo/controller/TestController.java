@@ -148,5 +148,19 @@ public String reserveRoom(@ModelAttribute("rooms") Rooms rooms,Model model,HttpS
 }
 
 
+@RequestMapping(value= {"/dashboard"})
+public String userDashboardinfo(Model model,HttpSession session,Principal principal) {
+	
+	String name = principal.getName();
+	User user=this.userRepository.getUserByUserName(name);
+	
+	model.addAttribute("user", user);
+	System.out.println("User "+user);
+	 
+	return "userdashboard";
+}
+
+
+
 }
   

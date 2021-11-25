@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <title>Hyatt Palace-Book A room now</title>
@@ -43,52 +43,109 @@
 </nav>
 
 <body>
-    <div class="card bg-dark border-secondary mb-3" style="max-height:500px;max-width:1000px;padding-left:100px;">
+	<form th:action="@{/process_reservation}" method="post" th:object="${rooms}">
+    <div class="card bg-dark border-secondary mb-3" style="height:500px;max-width:1000px;padding-left:100px;">
         <h1>Personal Details</h1>
         <div class="row">
             <div class="column">
                 <div class="elem-group">
-                    <input type="text" id="name" name="visitor_name" placeholder="First Name" pattern=[A-Z\sa-z]{3,20} required>
+                    <input 
+                    type="text" 
+                    id="name" 
+                    name="first_name" 
+                    placeholder="First Name" 
+                    pattern=[A-Z\sa-z]{3,20} 
+                    required
+                    th:value="${rooms.first_name}">
                 </div>
                 <div class="elem-group">
-                    <input type="text" id="name" name="visitor_name" placeholder="Last Name" pattern=[A-Z\sa-z]{3,20} required>
+                    <input 
+                    type="text" 
+                    id="name" 
+                    name="last_name" 
+                    placeholder="Last Name" 
+                    pattern=[A-Z\sa-z]{3,20} 
+                    required
+                 	th:value="${rooms.last_name}">
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="column">
                 <div class="elem-group">
-                    <input type="email" id="email" placeholder="Email" name="visitor_email" required>
+                    <input type="email" 
+                    id="email" 
+                    placeholder="Email" 
+                    name="email" 
+                    required
+                    th:value="${rooms.email}">
                 </div>
                 <div class="elem-group">
-                    <input type="tel" id="phone" name="visitor_phone" placeholder="Phone No." required>
+                    <input type="text" 
+                    id="email" 
+                    placeholder="contact number" 
+                    name="phone_no" 
+                    required
+                    th:value="${rooms.phone_no}">
                 </div>
+                
             </div>
+            
         </div>
         <div class="row">
             <div class="column">
                 <div class="elem-group ">
-                    <input type="number" id="adult" name="total_adults" placeholder="No. of Adults" min="1" required>
+                    <input type="number" 
+                    id="adult" 
+                    name="adults" 
+                    placeholder="No. of Adults" 
+                    min="1" 
+                    required
+                    th:value="${rooms.adults}"
+                    >
                 </div>
                 <div class="elem-group ">
-                    <input type="number" id="child" name="total_children" placeholder="No of Children" min="0" required>
+                    <input type="number" 
+                    id="child" 
+                    name="children" 
+                    placeholder="No of Children" 
+                    min="0" 
+                    required
+                    th:value="${rooms.children}"
+                    >
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="column">
                 <div class="elem-group">
-                    <input type="date" id="checkin-date" name="check-in" placeholder="Check-in Date" required>
+                    <input 
+                    type="date" 
+                    id="checkin-date" 
+                    name="checkinDate" 
+                    placeholder="Check-in Date" 
+                    required
+                    th:value="${rooms.checkinDate}"
+                    >
                 </div>
                 <div class="elem-group">
-                    <input type="date" id="checkout-date" name="check-out" placeholder="Check-out Date" required>
+                    <input type="date" 
+                    id="checkout-date" 
+                    name="checkoutDate" 
+                    placeholder="Check-out Date" 
+                    required
+                    th:value="${rooms.checkoutDate}"
+                    >
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="column">
                 <div class="elem-group">
-                    <select id="room-selection" name="room_preference" placeholder="Check Room Preference" required>
+                    <select id="room-selection" 
+                    name="category" 
+                    placeholder="Check Room Preference" 
+                    required>
                          <option value="">Choose a Room from the List</option>
                          <option value="">Standard</option>
                          <option value="">Superior</option>
@@ -97,7 +154,13 @@
                     </select>
                 </div>
                 <div class="elem-group">
-                    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+                    <textarea 
+                    id="message" 
+                    name="special_instructions" 
+                    placeholder="Tell us anything else that might be important." 
+                    required
+                    th:value="${rooms.special_instructions}"
+                    ></textarea>
                 </div>
                 <div class="elem-group1">
                     <button type="submit">Book</button>
@@ -105,6 +168,11 @@
             </div>
         </div>
     </div>
+    </form>
+    <div th:if="${session.message}" class="success_msg">
+        Room booked successfully.
+    	<th:block th:text="${#session.removeAttribute('message')}"></th:block>     
+	</div>
 
     <footer class="footer">
         <div class="container">

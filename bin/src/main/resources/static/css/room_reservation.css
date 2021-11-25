@@ -171,3 +171,10 @@ li {
         width: 100%;
     }
 }
+.success_msg{
+	position: relative;
+	left: 350px;
+	color: green;
+	font-weight: bolder;
+	top: -60px;
+}
