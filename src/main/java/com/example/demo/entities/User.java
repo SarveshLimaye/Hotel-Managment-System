@@ -32,6 +32,8 @@ public class User {
 	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.LAZY)
 	private List<Rooms> rooms=new ArrayList<>();
 	
+	
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -95,6 +97,7 @@ public class User {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", role=" + role
 				+ ", enabled=" + enabled + ", imageUrl=" + imageUrl + ", country=" + country + ", rooms=" + rooms + "]";
 	}
+	
 	
 	
 	

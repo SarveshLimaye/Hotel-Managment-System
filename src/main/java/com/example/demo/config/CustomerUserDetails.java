@@ -25,6 +25,8 @@ public class CustomerUserDetails implements UserDetails {
 		
 		return List.of(simpleGrantedAuthority);
 	}
+	
+	
 
 	@Override
 	public String getPassword() {
@@ -60,5 +62,6 @@ public class CustomerUserDetails implements UserDetails {
 		// TODO Auto-generated method stub
 		return true;
 	}
+	
 
 }
