@@ -81,10 +81,10 @@ public String userdashboard(){
 	return "userdashboard";
 }
 
-@RequestMapping(value={"/logout"})
-public String logout(){
-	return "logout";
-}
+//@RequestMapping(value={"/logout"})
+//public String logout(){
+//	return "logout";
+//}
 
 @RequestMapping(value={"/admin"},method=RequestMethod.GET)
 public String admin(Model model){
