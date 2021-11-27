@@ -4,6 +4,7 @@ package com.example.demo.controller;
 
 import java.security.Principal;
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpSession;
 
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 //import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -80,6 +82,11 @@ public String restaurant(){
 public String userdashboard(){
 	return "userdashboard";
 }
+
+
+	
+	
+
 
 //@RequestMapping(value={"/logout"})
 //public String logout(){
@@ -165,6 +172,7 @@ public String userDashboardinfo(Model model,HttpSession session,Principal princi
 	 
 	return "userdashboard";
 }
+
 
 
 
