@@ -145,13 +145,16 @@
                     <select id="room-selection" 
                     name="category" 
                     placeholder="Check Room Preference" 
+                    th:value ="${rooms.category}"
                     required>
                          <option value="">Choose a Room from the List</option>
-                         <option value="">Standard</option>
-                         <option value="">Superior</option>
-                         <option value="">Junior Suite</option>
-                         <option value="">Executive Suite</option>
+                         <option value="Standard">Standard</option>
+                         <option value="Superior">Superior</option>
+                         <option value="Junior Suite">Junior Suite</option>
+                         <option value="Executive Suite">Executive Suite</option>
                     </select>
+                    
+                    
                 </div>
                 <div class="elem-group">
                     <textarea 
