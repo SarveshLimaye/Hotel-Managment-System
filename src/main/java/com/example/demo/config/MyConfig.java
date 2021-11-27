@@ -79,14 +79,14 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
                 
                 response.sendRedirect(targetUrl);
             }
-        }).and().csrf().disable();
+        }).and().logout().and().csrf().disable();
 	
 		  
 	}
 //	
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-	    web.ignoring().antMatchers("/signup").antMatchers("/css/**").antMatchers("/do_register").antMatchers("/logout");
+	    web.ignoring().antMatchers("/signup").antMatchers("/css/**").antMatchers("/do_register");
 	   
 	}
 	
