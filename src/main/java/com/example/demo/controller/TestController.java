@@ -150,6 +150,12 @@ public String reserveRoom(@ModelAttribute("rooms") Rooms rooms,Model model,HttpS
 	
 	user.getRooms().add(rooms);
 	
+	if(rooms.getCategory()=="Luxury Room") {
+		rooms.setPrice(16000);
+	}
+	else {
+		rooms.setPrice(10000);
+	}
 	System.out.println("Rooms "+rooms);
 	
 	Rooms reservation=this.roomRepository.save(rooms);
@@ -174,9 +180,41 @@ public String userDashboardinfo(Model model,HttpSession session,Principal princi
 }
 
 
+//handler for deleting user data from admin login
+@RequestMapping(value= {"/admin/delete/{cid}"})
+public String deleteUser(@PathVariable("cid")Integer cId,Model model,HttpSession session) {
+	
+	Optional<User> userOptional=this.userRepository.findById(cId);
+	User user=userOptional.get();
+	
+	this.userRepository.delete(user);
+	
+	session.setAttribute("message", new Message("Contact deleted Successfully...","success"));
+	
+	return "redirect:/admin";
+}
 
+//handler for opening update form for admin
+@RequestMapping(value= {"/admin/update/{cid}"})
+public String updateUser(@PathVariable("cid")Integer cId,Model model,HttpSession session) {
+	Optional<User> userOptional=this.userRepository.findById(cId);
+	User user=userOptional.get();
+	model.addAttribute("user", user);
+	return "admin_userinfo";
+}
 
-
+//handler for processing update form using admin login
+@RequestMapping(value= {"/admin/do_update"},method = RequestMethod.POST)
+public String processUpdate(@ModelAttribute User user,HttpSession session) {
+	
+	
+	System.out.println("USER "+user);
+	
+	User result= this.userRepository.save(user);
+	
+	session.setAttribute("message", new Message("Contact updated Successfully...","success"));
+	return "admin_userinfo";
+}
 
 }
   

@@ -27,13 +27,13 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.web.bind.annotation.GetMapping;
-
+        
 //import com.example.demo.dao.UserRepository;
 //import com.example.demo.entities.User;
 
 //import com.example.demo.dao.UserRepository;
 //import com.example.demo.entities.User;
-
+  
 @SpringBootApplication
 public class DemoStaticApplication  {
 //	 @GetMapping("/user")
