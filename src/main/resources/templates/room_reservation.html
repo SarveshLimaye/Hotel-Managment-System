@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 
@@ -44,8 +45,7 @@
 
 <body>
 	<form th:action="@{/process_reservation}" method="post" th:object="${rooms}">
-    <div class="card bg-dark border-secondary mb-3" style="height:500px;max-width:1000px;padding-left:100px;">
-        <h1>Personal Details</h1>
+  <div class="card border-secondary mb-3" style="height:550px;max-width:900px;padding-left:100px;background-color:black;border-width:5px;border-color:white;border-radius:30px">        <h1>Personal Details</h1>
         <div class="row">
             <div class="column">
                 <div class="elem-group">
@@ -54,7 +54,7 @@
                     id="name" 
                     name="first_name" 
                     placeholder="First Name" 
-                    pattern=[A-Z\sa-z]{3,20} 
+                    pattern=[A-Z\sa-z]{1,20} 
                     required
                     th:value="${rooms.first_name}">
                 </div>
@@ -64,7 +64,7 @@
                     id="name" 
                     name="last_name" 
                     placeholder="Last Name" 
-                    pattern=[A-Z\sa-z]{3,20} 
+                    pattern=[A-Z\sa-z]{1,20} 
                     required
                  	th:value="${rooms.last_name}">
                 </div>
@@ -83,7 +83,7 @@
                 <div class="elem-group">
                     <input type="text" 
                     id="email" 
-                    placeholder="contact number" 
+                    placeholder="Contact number" 
                     name="phone_no" 
                     required
                     th:value="${rooms.phone_no}">
@@ -95,6 +95,7 @@
         <div class="row">
             <div class="column">
                 <div class="elem-group ">
+                <p>No. of Adults</p>
                     <input type="number" 
                     id="adult" 
                     name="adults" 
@@ -105,12 +106,13 @@
                     >
                 </div>
                 <div class="elem-group ">
+                <p>No. of Children</p>
                     <input type="number" 
                     id="child" 
                     name="children" 
                     placeholder="No of Children" 
                     min="0" 
-                    required
+                    
                     th:value="${rooms.children}"
                     >
                 </div>
@@ -119,6 +121,7 @@
         <div class="row">
             <div class="column">
                 <div class="elem-group">
+                <p>Check-In Date</p>
                     <input 
                     type="date" 
                     id="checkin-date" 
@@ -129,6 +132,7 @@
                     >
                 </div>
                 <div class="elem-group">
+                <p>Check-Out Date</p>
                     <input type="date" 
                     id="checkout-date" 
                     name="checkoutDate" 
@@ -148,10 +152,9 @@
                     th:value ="${rooms.category}"
                     required>
                          <option value="">Choose a Room from the List</option>
-                         <option value="Standard">Standard</option>
-                         <option value="Superior">Superior</option>
-                         <option value="Junior Suite">Junior Suite</option>
-                         <option value="Executive Suite">Executive Suite</option>
+                         <option value="Luxury Room">Luxury Room</option>
+                         <option value="Luxury Grande Room City View">Luxury Grande Room City View</option>
+                         <option value="Luxury Grande Room Sea View">Luxury Grande Room Sea View</option>
                     </select>
                     
                     
@@ -161,7 +164,7 @@
                     id="message" 
                     name="special_instructions" 
                     placeholder="Tell us anything else that might be important." 
-                    required
+                    
                     th:value="${rooms.special_instructions}"
                     ></textarea>
                 </div>
