@@ -150,11 +150,17 @@ public String reserveRoom(@ModelAttribute("rooms") Rooms rooms,Model model,HttpS
 	
 	user.getRooms().add(rooms);
 	
-	if(rooms.getCategory()=="Luxury Room") {
-		rooms.setPrice(16000);
+	if(rooms.getCategory().equals("Luxury Room")) {
+		rooms.setPrice(16950);
 	}
-	else {
-		rooms.setPrice(10000);
+	else if(rooms.getCategory().equals("Luxury Grande Room City View")) {
+		rooms.setPrice(18700);
+	}
+	
+	else if(rooms.getCategory().equals("Luxury Grande Room Sea View")) {
+		rooms.setPrice(20825);
+	}else {
+		rooms.setPrice(0);
 	}
 	System.out.println("Rooms "+rooms);
 	
@@ -167,15 +173,16 @@ public String reserveRoom(@ModelAttribute("rooms") Rooms rooms,Model model,HttpS
 }
 
 
+
+
+
 @RequestMapping(value= {"/dashboard"})
-public String userDashboardinfo(Model model,HttpSession session,Principal principal) {
-	
+public String userDashboardinfo(@ModelAttribute("rooms") Rooms rooms,Model model,HttpSession session,Principal principal) {
 	String name = principal.getName();
-	User user=this.userRepository.getUserByUserName(name);
 	
+	User user=this.userRepository.getUserByUserName(name);
 	model.addAttribute("user", user);
 	System.out.println("User "+user);
-	 
 	return "userdashboard";
 }
 

@@ -14,6 +14,17 @@
  <h4 th:text="${user.email}"></h4>
  <h4 th:text="${user.role}"></h4>
  
+ <div th:each = "ROOMS: ${listRooms}">
+ 
+ <h3 th:text="${ROOMS.checkinDate}"></h3>
+ 
+  <h3 th:text="${ROOMS.price}"></h3>
+ 
+ 
+ 
+ </div>
+
+ 
 </body>
 
 </html>
