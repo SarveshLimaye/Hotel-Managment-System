@@ -3,8 +3,11 @@ package com.example.demo.controller;
 
 
 import java.security.Principal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.HttpSession;
 
@@ -28,6 +31,7 @@ import com.example.demo.helper.Message;
 //
 //import com.example.demo.dao.UserRepository;
 //import com.example.demo.entities.User;
+import com.nimbusds.jose.shaded.json.parser.ParseException;
 
 
 @Controller
@@ -162,8 +166,30 @@ public String reserveRoom(@ModelAttribute("rooms") Rooms rooms,Model model,HttpS
 	}else {
 		rooms.setPrice(0);
 	}
-	System.out.println("Rooms "+rooms);
 	
+	System.out.println("Rooms "+rooms);
+	String checkIn = rooms.getCheckinDate();
+	String checkOut = rooms.getCheckoutDate();
+	try {
+		Date checkInDate = new SimpleDateFormat("yyyy-MM-dd").parse(checkIn);
+		System.out.println("The check in date in date format: "+checkInDate);
+		Date checkOutDate = new SimpleDateFormat("yyyy-MM-dd").parse(checkOut);
+		System.out.println("The check out date in date format: "+checkOutDate);
+		long diff = checkOutDate.getTime() - checkInDate.getTime();
+//		System.out.println("The difference between the two dates is: "+diff);
+		TimeUnit time = TimeUnit.DAYS; 
+        long difference = time.convert(diff, TimeUnit.MILLISECONDS);
+        System.out.println("The difference in days is : "+difference);
+        rooms.setTotal_days(difference);
+//		System.out.println(checkOutDate-checkInDate);
+        long a=rooms.getPrice();
+        long b=a*difference;
+        rooms.setTotal_price(b);
+        
+	}catch (java.text.ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	Rooms reservation=this.roomRepository.save(rooms);
 	  
 	
@@ -206,7 +232,10 @@ public String deleteUser(@PathVariable("cid")Integer cId,Model model,HttpSession
 public String updateUser(@PathVariable("cid")Integer cId,Model model,HttpSession session) {
 	Optional<User> userOptional=this.userRepository.findById(cId);
 	User user=userOptional.get();
+	
+//	User userRooms=user.getRooms();
 	model.addAttribute("user", user);
+	model.addAttribute("userRooms",user.getRooms());
 	return "admin_userinfo";
 }
 
@@ -217,11 +246,27 @@ public String processUpdate(@ModelAttribute User user,HttpSession session) {
 	
 	System.out.println("USER "+user);
 	
+	
+//	user.getRooms().add((Rooms) user.getRooms());
 	User result= this.userRepository.save(user);
 	
 	session.setAttribute("message", new Message("Contact updated Successfully...","success"));
 	return "admin_userinfo";
 }
+
+//handler for billing page
+@RequestMapping(value= {"/billing"})
+public String userBillinginfo(@ModelAttribute("rooms") Rooms rooms,Model model,HttpSession session,Principal principal) {
+	String name = principal.getName();
+	
+	User user=this.userRepository.getUserByUserName(name);
+	model.addAttribute("user", user);
+//	user.getRooms().add(user.getRooms());
+	model.addAttribute("userRooms", user.getRooms());
+	System.out.println("User "+user);
+	return "billing";
+}
+
 
 }
   
