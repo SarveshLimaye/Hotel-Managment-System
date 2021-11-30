@@ -28,6 +28,8 @@ public class Rooms {
 	private int children;
 	private String category;
 	private String special_instructions;
+	private long total_price;
+	private long total_days;
 	
 	@ManyToOne
 	private User user;
@@ -113,13 +115,28 @@ public class Rooms {
 	public void setSpecial_instructions(String special_instructions) {
 		this.special_instructions = special_instructions;
 	}
+	public long getTotal_price() {
+		return total_price;
+	}
+	public void setTotal_price(long total_price) {
+		this.total_price = total_price;
+	}
+	public long getTotal_days() {
+		return total_days;
+	}
+	public void setTotal_days(long total_days) {
+		this.total_days = total_days;
+	}
 	@Override
 	public String toString() {
 		return "Rooms [rId=" + rId + ", first_name=" + first_name + ", last_name=" + last_name + ", email=" + email
 				+ ", phone_no=" + phone_no + ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate
 				+ ", price=" + price + ", adults=" + adults + ", children=" + children + ", category=" + category
-				+ ", special_instructions=" + special_instructions + ", user=" + user + "]";
+				+ ", special_instructions=" + special_instructions + ", total_price=" + total_price + ", total_days="
+				+ total_days + ", user=" + user + "]";
 	}
+	
+	
 	
 	
 	

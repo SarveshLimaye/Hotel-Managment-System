@@ -1,0 +1,17 @@
+.heading{
+	text-align: center;
+	margin: 3rem 0 3rem 0;
+}
+.udel_icons{
+	position: relative;
+	display: flex;
+	justify-content: spaced-even;
+}
+.udel_icons a{
+	position: relative;
+	display: flex;
+	justify-content: spaced-even;
+	text-decoration: none;
+	color: black;
+	margin: auto;
+}
