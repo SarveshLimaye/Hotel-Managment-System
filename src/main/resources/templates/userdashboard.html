@@ -5,24 +5,128 @@
     <title>Hyatt Palace-Facilities</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/userdashboard.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
+
+
+
+
 <body>
- <h1>Private user dashboard</h1>
- 
- <h4 th:text="${user.email}"></h4>
- <h4 th:text="${user.role}"></h4>
- 
- <div th:each = "ROOMS: ${listRooms}">
- 
- <h3 th:text="${ROOMS.checkinDate}"></h3>
- 
-  <h3 th:text="${ROOMS.price}"></h3>
- 
- 
- 
- </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand  " href="/hotel">HYATT PALACE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/hotel">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/room_reservation">Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/facilities">Facilities</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/restaurant">Restaurant</a>
+                </li>
+                
+                 <li class="nav-item">
+                    <a class="nav-link" href="/dashboard">Profile</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+  
+    <div class="header">
+        <h2>Welcome to User Dashboard</h2>
+    </div>
+
+    <div class="login-container">
+          <div class="user-heading">
+            <h1>Personal Details</h1>
+        </div>
+        <div class="details">
+            <div class="user"> 
+                <h4 >Name</h4>
+                <div class="user-border">
+                    <h4 th:text="${user.name}"></h4>
+                </div> 
+                
+            </div>
+            <div class="user">
+                <h4>Email-id</h4>
+               <div class="user-border">
+                <h4 th:text="${user.email}"></h4>
+            </div> 
+            </div>
+            <div class="user">
+                <h4>Country</h4>
+                <div class="user-border">
+                    <h4 th:text="${user.country}"></h4>
+                </div> 
+            </div>
+
+        </div>
+          
+            <div class="sign_up"><a href="/billing">View Booking</a></div>
+            <div class="sign_up"><a href="/logout">Logout</a></div>
+           
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Taj Groups</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="/room_reservation">Booking</a></li>
+                        <li><a href="#">Restaurant</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">Contact No . 022 9897 2456</a</li>
+                <li><a href="#">Mail : hotels@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Address</h4>
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate adipisci quia ab omnis id ipsum quae inventore </a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
 
  
 </body>
