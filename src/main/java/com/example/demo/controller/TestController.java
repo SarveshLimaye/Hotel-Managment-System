@@ -152,7 +152,11 @@ public String reserveRoom(@ModelAttribute("rooms") Rooms rooms,Model model,HttpS
 	String name = principal.getName();
 	User user=this.userRepository.getUserByUserName(name);
 	
+	int cId=user.getId();
+	rooms.setcId(cId);
 	user.getRooms().add(rooms);
+	
+	
 	
 	if(rooms.getCategory().equals("Luxury Room")) {
 		rooms.setPrice(16950);
@@ -260,9 +264,17 @@ public String userBillinginfo(@ModelAttribute("rooms") Rooms rooms,Model model,H
 	String name = principal.getName();
 	
 	User user=this.userRepository.getUserByUserName(name);
+	int cId=user.getId();
+	
+//	Rooms roomReservations=this.roomRepository.getUserByCId(cId);
+	List<Rooms> roomReservations=this.roomRepository.getUserByCId(cId);
+	for(int i=0;i<roomReservations.size();i++){
+	    System.out.println(roomReservations.get(i));
+	} 
 	model.addAttribute("user", user);
 //	user.getRooms().add(user.getRooms());
-	model.addAttribute("userRooms", user.getRooms());
+	model.addAttribute("userRooms", roomReservations);
+	
 	System.out.println("User "+user);
 	return "billing";
 }

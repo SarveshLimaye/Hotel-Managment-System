@@ -30,6 +30,7 @@ public class Rooms {
 	private String special_instructions;
 	private long total_price;
 	private long total_days;
+	private int cId;
 	
 	@ManyToOne
 	private User user;
@@ -127,14 +128,21 @@ public class Rooms {
 	public void setTotal_days(long total_days) {
 		this.total_days = total_days;
 	}
+	public int getcId() {
+		return cId;
+	}
+	public void setcId(int cId) {
+		this.cId = cId;
+	}
 	@Override
 	public String toString() {
 		return "Rooms [rId=" + rId + ", first_name=" + first_name + ", last_name=" + last_name + ", email=" + email
 				+ ", phone_no=" + phone_no + ", checkinDate=" + checkinDate + ", checkoutDate=" + checkoutDate
 				+ ", price=" + price + ", adults=" + adults + ", children=" + children + ", category=" + category
 				+ ", special_instructions=" + special_instructions + ", total_price=" + total_price + ", total_days="
-				+ total_days + ", user=" + user + "]";
+				+ total_days + ", cId=" + cId + ", user=" + user + "]";
 	}
+	
 	
 	
 	
