@@ -103,11 +103,11 @@ public String admin(Model model){
 	 model.addAttribute("listUsers", listUsers);
 	return "admin";
 }
-@RequestMapping(value={"/employee"},method=RequestMethod.GET)
+@RequestMapping(value={"/employeedetails"},method=RequestMethod.GET)
 public String commonEmployee(Model model){
 	 List<User> listUsers = userRepository.findAll();
 	 model.addAttribute("listUsers", listUsers);
-	return "employee";
+	return "employeedetails";
 }
 
 
