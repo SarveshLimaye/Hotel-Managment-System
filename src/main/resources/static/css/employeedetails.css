@@ -1,0 +1,189 @@
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+form {
+    padding-top: 100px;
+}
+
+body {
+    background-image: url("https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2018/09/06/1111/Hyatt-Regency-Mumbai-P244-Facade.jpg/Hyatt-Regency-Mumbai-P244-Facade.16x9.jpg");
+}
+
+p {
+    color: white;
+    padding: 0px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font-family: 'Arial';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+}
+
+input {
+    border-radius: 2.2px;
+    font-size: 1.25em;
+    font-family: 'Arial';
+    padding: 10px;
+    width: 240px;
+}
+
+select {
+    border-radius: 3px;
+    padding-top: 25px;
+    font-size: 1.25em;
+    width: 350px;
+}
+
+div.elem-group {
+    max-width: 50%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-right: 50px;
+}
+
+textarea {
+    height: 50px;
+    padding-right: 10px;
+    width: 350px;
+}
+
+hr {
+    border: 1px dotted #ccc;
+}
+
+button {
+    height: 51px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 1.254em;
+    font-family: 'Arial';
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 75%;
+    padding-right: 30px;
+}
+
+button:hover {
+    border: 2.1px solid white;
+    background-color: #3e8e41
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+div.card {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 10px;
+    /* Added */
+}
+
+li {
+    list-style-type: none;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col span {
+    color: #bbbbbb;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.footer {
+    background-color: #02091a;
+    padding: 70px;
+    margin-top: 5rem;
+}
+
+.navbar-custom {
+    background-color: #02091a;
+}
+
+.navbar-custom .navbar-brand {
+    color: #bbbbbb;
+}
+
+.navbar-custom .navbar-nav {
+    color: #bbbbbb;
+}
+
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+}
+
+.success_msg {
+    position: relative;
+    left: 350px;
+    color: green;
+    font-weight: bolder;
+    top: -60px;
+}
