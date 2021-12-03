@@ -74,7 +74,7 @@ public class MyConfig extends WebSecurityConfigurerAdapter {
                     targetUrl = "/admin";
                 }
                 else if(role.contains("EMPLOYEE")) {
-                    targetUrl = "/employee";
+                    targetUrl = "/employeedetails";
                 }
                 
                 response.sendRedirect(targetUrl);
