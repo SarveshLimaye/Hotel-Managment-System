@@ -1,5 +1,6 @@
 # Hotel-Managment-System
-This project is of Hotel Management System. Tech Stacks used in this are : HTML, CSS (for the frontend), Spring boot and SQL (for backend). 
+This project is of Hotel Management System. 
+Tech Stacks used in this are : HTML, CSS (for the frontend), Spring boot and SQL (for backend). 
 ## Installation
 1. Fork this repository. 
 2. Clone the forked Repository.
