@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.demo.dao.EmployeeRepository;
 import com.example.demo.dao.RoomRepository;
 import com.example.demo.dao.UserRepository;
 import com.example.demo.entities.Rooms;
@@ -47,6 +48,9 @@ private UserRepository userRepository;
 	
 @Autowired
 private RoomRepository roomRepository;	
+
+@Autowired
+private EmployeeRepository employeeRepository;
 
 
 @RequestMapping(value={"/","home"},method=RequestMethod.POST)
@@ -103,11 +107,16 @@ public String admin(Model model){
 	 model.addAttribute("listUsers", listUsers);
 	return "admin";
 }
-@RequestMapping(value={"/employeedetails"},method=RequestMethod.GET)
-public String commonEmployee(Model model){
-	 List<User> listUsers = userRepository.findAll();
-	 model.addAttribute("listUsers", listUsers);
-	return "employeedetails";
+
+@RequestMapping(value={"/employee"},method=RequestMethod.GET)
+public String commonEmployee(Model model,Principal principal){
+	String name = principal.getName();
+	User user=this.userRepository.getUserByUserName(name);
+	
+//	 List<User> listUsers = userRepository.findAll();
+//	 model.addAttribute("listUsers", listUsers);
+	model.addAttribute("employee",user);
+	return "employee";
 }
 
 
@@ -249,9 +258,12 @@ public String processUpdate(@ModelAttribute User user,HttpSession session) {
 	
 	
 	System.out.println("USER "+user);
-	
+	if(user.getRole().equals("ROLE_EMPLOYEE")) {
+		this.employeeRepository.save(user);
+	}
 	
 //	user.getRooms().add((Rooms) user.getRooms());
+	
 	User result= this.userRepository.save(user);
 	
 	session.setAttribute("message", new Message("Contact updated Successfully...","success"));

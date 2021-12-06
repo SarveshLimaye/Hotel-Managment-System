@@ -1,0 +1,211 @@
+
+body{
+    margin: 0;
+    padding: 0;
+	background-image: url("https://www.wallpapertip.com/wmimgs/15-156960_hotels-images-hd.jpg");
+    /* background-size: cover; */
+	background-repeat: no-repeat;
+}
+
+
+
+.header{
+	text-align: center;
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+.user{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.navbar-custom {
+    background-color: #02091a;
+}
+
+.navbar-custom .navbar-brand {
+    color: #bbbbbb;
+}
+
+.navbar-custom .navbar-nav {
+    color: #bbbbbb;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+	list-style: none;
+}
+li{
+	text-align: justify;
+}
+
+
+.login-container{
+    width: 650px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background: #02091a;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    color: #fff;
+    padding: 30px 20px;
+    margin-top: 2rem;
+}
+
+
+.login-container h1{
+    text-align: center;
+    font-size: 24px;
+}
+
+.user{
+	margin-top: 10px;
+	margin-bottom: 20rem;
+}
+.login-container div{
+    margin-bottom: 20px;
+}
+
+.user-text{
+	text-align: center;
+	margin-left: 5rem;
+}
+
+.user-border{
+	border:#F26FC9 dotted 1px;
+}
+
+.user-heading{
+	margin-bottom: 2rem;
+}
+
+
+
+.user h4{
+	font-size: 20px;
+	margin-right: 12px;
+}
+
+
+.login-container input[type="text"], input[type="password"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffff;
+    background: transparent;
+    color: #ffff;
+    height: 40px;
+}
+
+.login-container button[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background-image: linear-gradient(to right,#F26FC9, #8772EF);
+    color: #ffff;
+    
+}
+.login-container button[type="submit"]:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #696969;
+}
+.sign_up{
+	width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background-image: linear-gradient(to right,#F26FC9, #8772EF);
+    color: #ffff;
+    align-items:center;
+    right:100px;
+}
+.sign_up:hover{
+	cursor: pointer;
+    box-shadow: 10px 10px 10px #000;
+    color: aqua;
+}
+.sign_up a{
+	text-decoration:none;
+	color: #ffff;
+	align-items:center;
+    right:100px;
+	display:block;
+    text-decoration: none;
+     line-height: 35px;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+button:hover{
+    backgroundcolor: chartreuse;
+    
+}
+
+
+
+.footer{
+	background-color: #02091a;
+    padding: 70px 0;
+    margin-top: 45rem;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer-col span{
+    color: #bbbbbb;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+} 
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+

@@ -3,8 +3,27 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>Employee page</title>
+	
+	<link rel="stylesheet" href="css/employee.css">
 </head>
 <body>
-	<h1>This is the special employee page.</h1>
+	<div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-7">
+            <div class="card p-3 py-4">
+                <div class="text-center"> <img src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" width="100" class="rounded-circle"> </div>
+                <div class="text-center mt-3"> <span class="bg-secondary p-1 px-4 rounded text-white">Pro</span>
+        
+                    <h5 class="mt-2 mb-0" th:text="${employee.name}">Employee Name</h5> <span>Category</span>
+                    <div class="px-4 mt-1">
+                        
+                    </div>
+                    
+                    <div class="buttons">  <a href="@{/employee/update}"><button class="btn btn-primary px-4 ms-3">Update</button></a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

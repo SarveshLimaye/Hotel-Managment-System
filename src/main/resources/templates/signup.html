@@ -8,10 +8,21 @@
 </head>
 <body>
     <div class="main_form">
+    	<a href="/login"><i class="fas fa-chevron-left back_button"></i></a>
         <h4 class="form_head">Create an account</h4>
         <h4 class="head_follow">Add a strong password to finish up</h4>
         <form th:action="@{/do_register}" method="post" th:object="${user}">
             <div class="left_side">
+                <div class="form_info">
+                    <h3 class="email_heading">Name:</h3>
+                    <input 
+                    name="name"
+                    type="text" 
+                    placeholder="Name"
+                    required
+                    th:value="${user.name}"
+                    >
+                </div>
                 <div class="form_info">
                     <h3 class="email_heading">Email Address:</h3>
                     <input 
