@@ -46,7 +46,7 @@ li{
 
 .login-container{
     width: 650px;
-    height: 500px;
+    height: 450px;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -125,6 +125,7 @@ li{
     color: #ffff;
     align-items:center;
     right:100px;
+    margin-top:2rem;
 }
 .sign_up:hover{
 	cursor: pointer;
