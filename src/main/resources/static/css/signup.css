@@ -9,7 +9,7 @@
     width: 800px;
     left: 350px;
     top: 100px;
-    height: 500px;
+    height: 600px;
     /* border-radius: 30px; */
     border: 1px solid #BFBFBF;
     background: #000;
@@ -133,10 +133,10 @@ input{
 }
 .bottom_ins{
     position: relative;
-    bottom: -50px;
-    left: 50px;
+    bottom: -150px;
+    left: 120px;
     font-weight:600;
-    color:rgba(0, 0, 0, 0.585);
+    color: white;
 }
 .bottom_ins a{
     text-decoration: none;
@@ -154,6 +154,13 @@ input{
 	font-size: 1.2rem;
 	color: green;
 	position: relative;
-	left: -100px;
-	top: 140px;
+	left: 110px;
+	top: 130px;
+}
+.back_button{
+	font-size: 1.8rem;
+	position: absolute;
+	left: 25px;
+	top: 70px;
+	color: white;
 }
