@@ -1,6 +1,20 @@
 # Hotel-Managment-System
-This project is of Hotel Management System. 
-Tech Stacks used in this are : HTML, CSS (for the frontend), Spring boot and SQL (for backend). 
+This project is of Hotel Management System, which allows you to book rooms, seeing prices of rooms, see reviews.
+It would also show types of rooms available. It also has a login system, where admin and customers can enter details.
+
+## Tech Stack
+### Front-end
+1. HTML
+2. CSS
+3. Javascript
+### Back-end
+3. Spring boot 
+4. Spring Security
+5. Hibernates
+6. Thymeleaf
+7. SQL
+
+
 ## Installation
 1. Fork this repository. 
 2. Clone the forked Repository.
