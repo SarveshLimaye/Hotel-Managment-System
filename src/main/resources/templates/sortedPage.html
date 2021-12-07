@@ -2,61 +2,25 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Admin Dashboard</title>
+<title>Employees Data</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="css/admin.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="heading">
-		<h4>This is admin dashboard</h4>
-		<div class="">
-			<a href="/logout">Logout</a>
-		</div>
-		<div class="sorting_btns">
-			<a href="/admin/customers">
-				<div>Customers</div>
-			</a>
-			<a href="/admin/employees">
-				<div>Employees</div>
-			</a>
-		</div>
-	</div>
+<div class="heading">
+<h4>This is admin dashboard</h4>
+<div class="">
+<a href="/logout">Logout</a>
+</div>
+
+</div>
 <div th:if="${session.message}" class="alert alert-success text-center">
      	User Deleted Successfully
         <th:block th:text="${#session.removeAttribute('message')}"></th:block>               
 </div>
  <div>
-        <table class="table table-striped table-bordered">
-            <thead class="thead-dark">
-                <tr>
-                    <th>User ID</th>
-                    <th>E-mail</th>
-                    <th>Role</th>
-                    <th>Options</th>
-                    </tr>
-            </thead>
-            <tbody>
-                <tr th:each="USER: ${listUsers}">
-                    <td th:text="${USER.id}">User ID</td>
-                    <td th:text="${USER.email}">E-mail</td>
-                    <td th:text="${USER.role}">Role</td>
-                    <td>
-                    	<div class="udel_icons">
-	                    	<a th:href="@{'admin/update/'+${USER.id}}">
-	                    		<i class="far fa-edit m-auto"></i>
-	                    	</a>
-	                    	<a th:href="@{'admin/delete/'+${USER.id}}">
-	                    		<i class="fas fa-trash-alt m-auto"></i>
-	                    	</a>
-                    	</div>
-                    </td>
-                    
-                   
-                </tr>
-            </tbody>
-        </table>
         Employees Only:
         <table class="table table-striped table-bordered">
             <thead class="thead-dark">
@@ -88,6 +52,6 @@
             </tbody>
         </table>
     </div>
-</div>
+
 </body>
 </html>
