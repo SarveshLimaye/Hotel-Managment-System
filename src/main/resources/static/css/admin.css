@@ -19,3 +19,18 @@
 .logout{
 	margin-top:1rem;
 }
+.sorting_btns{
+	display: flex;
+	position: absolute;
+	border: 1px solid black;
+	left:1300px;
+	top:80px;
+	
+}
+.sorting_btns a{
+	border: 1px solid black;
+	text-decoration: none;
+	font-weight:bold;
+	background: #EEEFEE;
+	color: black;
+}

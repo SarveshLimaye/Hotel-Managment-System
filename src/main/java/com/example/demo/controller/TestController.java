@@ -103,7 +103,9 @@ public String userdashboard(){
 
 @RequestMapping(value={"/admin"},method=RequestMethod.GET)
 public String admin(Model model){
+	 List<User> listEmployees=userRepository.getUserByRole("ROLE_EMPLOYEE");
 	 List<User> listUsers = userRepository.findAll();
+	 model.addAttribute("listEmployees",listEmployees);
 	 model.addAttribute("listUsers", listUsers);
 	return "admin";
 }
@@ -291,6 +293,23 @@ public String userBillinginfo(@ModelAttribute("rooms") Rooms rooms,Model model,H
 	return "billing";
 }
 
+
+//handler for sorting the users according to their roles
+@RequestMapping(value= {"/admin/employees"})
+public String sortUsers(Model model) {
+	
+	List<User> listEmployees=userRepository.getUserByRole("ROLE_EMPLOYEE");
+	model.addAttribute("listEmployees",listEmployees);
+	return "sortedPage";
+}
+
+@RequestMapping(value= {"/admin/customers"})
+public String sortCustomers(Model model) {
+	
+	List<User> listEmployees=userRepository.getUserByRole("ROLE_USER");
+	model.addAttribute("listEmployees",listEmployees);
+	return "sortedPage";
+}
 
 }
   
